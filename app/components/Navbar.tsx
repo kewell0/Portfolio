@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import Image from "next/image";
@@ -16,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-[100]">
+    <nav className="fixed w-full h-20 shadow-xl z-50 bg-red">
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <Image
           src="/../public/assets/navLogo.png"

@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import "./globals.css";
 
 export const metadata = {
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
