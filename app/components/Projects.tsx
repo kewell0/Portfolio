@@ -31,18 +31,18 @@ const Projects = () => {
             projectUrl="/crypto"
             tech="HTML, CSS, JavaScript"
           />
-          <Project
+          {/* <Project
             title="Netflix App"
             backgroundImg={netflixImg}
             projectUrl="/netflix"
             tech="React JS"
-          />
-          <Project
+          /> */}
+          {/* <Project
             title="Twitch UI"
             backgroundImg={twitchImg}
             projectUrl="/twitch"
             tech="Next JS"
-          />
+          /> */}
         </div>
       </div>
     </div>
