@@ -5,6 +5,9 @@ import propertyImg from "../../public/assets/projects/property.jpg";
 import cryptoImg from "../../public/assets/projects/crypto.jpg";
 import netflixImg from "../../public/assets/projects/netflix.jpg";
 import twitchImg from "../../public/assets/projects/twitch.jpg";
+
+import movieLand from "../../public/assets/projects/movie-land.png";
+import barter from "../../public/assets/projects/Barter-app.png";
 import Project from "./Project";
 
 const Projects = () => {
@@ -17,16 +20,16 @@ const Projects = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <Project
-            title="Property Finder"
-            backgroundImg={propertyImg}
+            title="Movie-land"
+            backgroundImg={movieLand}
             projectUrl="/property"
             tech="React JS"
           />
           <Project
-            title="Crypto App"
-            backgroundImg={cryptoImg}
+            title="Barter-right"
+            backgroundImg={barter}
             projectUrl="/crypto"
-            tech="React JS"
+            tech="HTML, CSS, JavaScript"
           />
           <Project
             title="Netflix App"
