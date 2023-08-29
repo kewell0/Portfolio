@@ -7,8 +7,8 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen text-center">
-      <div className="max-w-[1240px] h-full p-2 flex justify-center items-center">
+    <div id="home" className="w-full h-[620px] text-center pt-20">
+      <div className="max-w-[1240px] w-full h-full  mx-auto p-2 flex justify-center items-center ">
         <div>
           <p className="text-sm tracking-widest text-gray-600">
             LET'S BUILD SOMETHING TOGETHER
@@ -21,22 +21,34 @@ const Hero = () => {
           <p className="text-md tracking-widest text-gray-600 max-w-[75%] m-auto">
             I specialize in building exceptional digital user experiences.
             Currently focused on building responsive front-end applications
-            while learning back-end technologies
+            while learning back-end technologies.
           </p>
 
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaLinkedinIn />
-            </div>
-            <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaGithub />
-            </div>
+          <div className="flex items-center justify-between max-w-[330px] m-auto py-6">
+            <a
+              href="https://www.linkedin.com/in/caleb-owatah/"
+              target={"_blank"}
+            >
+              <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaLinkedinIn />
+              </div>
+            </a>
+            <a href="https://github.com/kewell0" target={"_blank"}>
+              <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaGithub />
+              </div>
+            </a>
             <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <AiOutlineMail />
             </div>
-            <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <BsFillPersonLinesFill />
-            </div>
+            <a
+              href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
+              target={"_blank"}
+            >
+              <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <BsFillPersonLinesFill />
+              </div>
+            </a>
           </div>
         </div>
       </div>

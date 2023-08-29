@@ -9,7 +9,7 @@ import ContactImg from "../../public/assets/contact.jpg";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen">
+    <div id="contact" className="w-full lg:h-screen lg:px-16">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
@@ -119,7 +119,6 @@ const Contact = () => {
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
-                    // rows="10"
                     name="message"
                   ></textarea>
                 </div>

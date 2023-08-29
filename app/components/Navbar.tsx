@@ -3,13 +3,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+  const [boxShadow, setBoxShadow] = useState(false);
+
+  useEffect(() => {
+    const handleBoxshadow = () => {
+      if (window.scrollY >= 60) {
+        setBoxShadow(true);
+      } else {
+        setBoxShadow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleBoxshadow);
+  }, []);
 
   const handleNav = () => {
     setNav(!nav);
@@ -17,8 +30,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-50 bg-red">
-      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
+    <nav
+      className={
+        boxShadow
+          ? "fixed w-full h-20 shadow-xl z-[900] bg-[#ecf0f3]"
+          : "fixed w-full h-20  z-[900] bg-[#ecf0f3]"
+      }
+    >
+      <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
         <Image
           src="/../public/assets/navLogo.png"
           alt="logo"
@@ -26,24 +45,24 @@ export default function Navbar() {
           height="50"
         />
         <div>
-          <ul className="hidden sm:flex">
+          <ul className="hidden sm:flex mr-[70px]">
             <Link href={"/"}>
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/#about"}>
               <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/#skills"}>
               <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/#projects"}>
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Projects
               </li>
             </Link>
-            <Link href={"/"}>
+            {/* <Link href={"/"}>
               <li className="ml-10 text-sm uppercase hover:border-b">Resume</li>
-            </Link>
+            </Link> */}
             <Link href={"/"}>
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Contact
@@ -95,22 +114,32 @@ export default function Navbar() {
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
               <Link href={"/"}>
-                <li className="py-4 text-sm">Home</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Home
+                </li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm">About</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  About
+                </li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm">Skills</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Skills
+                </li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm">Projects</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Projects
+                </li>
               </Link>
+              {/* <Link href={"/"}>
+                <li onClick={()=>setNav(false)} className="py-4 text-sm">Resume</li>
+              </Link> */}
               <Link href={"/"}>
-                <li className="py-4 text-sm">Resume</li>
-              </Link>
-              <Link href={"/"}>
-                <li className="py-4 text-sm">Contact</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Contact
+                </li>
               </Link>
             </ul>
             <div className="pt-40">

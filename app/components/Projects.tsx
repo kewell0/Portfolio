@@ -12,7 +12,7 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full">
+    <div id="projects" className="w-full lg:px-16">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Projects
@@ -22,13 +22,13 @@ const Projects = () => {
           <Project
             title="Movie-land"
             backgroundImg={movieLand}
-            projectUrl="/property"
+            projectUrl="https://movie-land11.netlify.app"
             tech="React JS"
           />
           <Project
             title="Barter-right"
             backgroundImg={barter}
-            projectUrl="/crypto"
+            projectUrl="https://barter-right.vercel.app/"
             tech="HTML, CSS, JavaScript"
           />
           {/* <Project
