@@ -3,10 +3,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Link as LinkScroll } from "react-scroll";
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import logo from "../../public/assets/logo1.png";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -38,36 +40,81 @@ export default function Navbar() {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
-        <Image
-          src="/../public/assets/navLogo.png"
-          alt="logo"
-          width="80"
-          height="50"
-        />
+        <LinkScroll
+          activeClass="active"
+          to={"home"}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <Image
+            src={logo}
+            className="cursor-pointer"
+            alt="logo"
+            width="80"
+            height="50"
+          />
+        </LinkScroll>
         <div>
           <ul className="hidden sm:flex mr-[70px]">
-            <Link href={"/"}>
+            <LinkScroll
+              activeClass="active"
+              to={"home"}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-            </Link>
-            <Link href={"/#about"}>
+            </LinkScroll>
+            <LinkScroll
+              activeClass="active"
+              to={"about"}
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={500}
+            >
               <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-            </Link>
-            <Link href={"/#skills"}>
+            </LinkScroll>
+            <LinkScroll
+              activeClass="active"
+              to={"skills"}
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={500}
+            >
               <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-            </Link>
-            <Link href={"/#projects"}>
+            </LinkScroll>
+            <LinkScroll
+              activeClass="active"
+              to={"projects"}
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Projects
               </li>
-            </Link>
+            </LinkScroll>
             {/* <Link href={"/"}>
               <li className="ml-10 text-sm uppercase hover:border-b">Resume</li>
             </Link> */}
-            <Link href={"/"}>
+            <LinkScroll
+              activeClass="active"
+              to={"contact"}
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Contact
               </li>
-            </Link>
+            </LinkScroll>
           </ul>
           {/* Hamburger */}
           <div onClick={handleNav} className="sm:hidden cursor-pointer">
@@ -91,12 +138,23 @@ export default function Navbar() {
         >
           <div>
             <div className="flex items-center justify-between w-full">
-              <Image
-                src="/../public/assets/navLogo.png"
-                alt="logo"
-                width="70"
-                height="35"
-              />
+              <LinkScroll
+                activeClass="active"
+                to={"home"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Image
+                  src={logo}
+                  className="cursor-pointer"
+                  alt="logo"
+                  width="70"
+                  height="35"
+                  onClick={() => setNav(false)}
+                />
+              </LinkScroll>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-gray-300 shadow-lg p-3 cursor-pointer"
@@ -113,34 +171,69 @@ export default function Navbar() {
           {/* Mobile Menu items */}
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href={"/"}>
+              <LinkScroll
+                activeClass="active"
+                to={"home"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
                 </li>
-              </Link>
-              <Link href={"/"}>
+              </LinkScroll>
+              <LinkScroll
+                activeClass="active"
+                to={"about"}
+                spy={true}
+                smooth={true}
+                offset={-45}
+                duration={500}
+              >
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   About
                 </li>
-              </Link>
-              <Link href={"/"}>
+              </LinkScroll>
+              <LinkScroll
+                activeClass="active"
+                to={"skills"}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Skills
                 </li>
-              </Link>
-              <Link href={"/"}>
+              </LinkScroll>
+              <LinkScroll
+                activeClass="active"
+                to={"projects"}
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Projects
                 </li>
-              </Link>
+              </LinkScroll>
               {/* <Link href={"/"}>
                 <li onClick={()=>setNav(false)} className="py-4 text-sm">Resume</li>
               </Link> */}
-              <Link href={"/"}>
+              <LinkScroll
+                activeClass="active"
+                to={"contact"}
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Contact
                 </li>
-              </Link>
+              </LinkScroll>
             </ul>
             <div className="pt-40">
               <p className="tracking-widest text-[#5651e5]">LET'S CONNECT</p>
