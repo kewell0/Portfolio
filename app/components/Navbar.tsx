@@ -127,13 +127,13 @@ export default function Navbar() {
       <div
         onClick={() => setNav(false)}
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-[100%] bg-black/70" : ""
+          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-[100%] bg-[#ecf0f3] p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
@@ -236,9 +236,9 @@ export default function Navbar() {
                 </li>
               </LinkScroll>
             </ul>
-            <div className="pt-40">
+            <div className="mt-16">
               <p className="tracking-widest text-[#5651e5]">LET'S CONNECT</p>
-              <div className="flex justify-between items-center my-4 w-full sm:w-[75%]">
+              <div className="flex gap-8 items-center my-4 w-full sm:w-[75%]">
                 <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <FaGithub />
                 </div>
