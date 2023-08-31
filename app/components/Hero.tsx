@@ -26,11 +26,11 @@ const Hero = () => {
 
           <div className="flex items-center justify-between max-w-[330px] m-auto py-6">
             <a
-              href="https://www.linkedin.com/in/caleb-owatah/"
+              href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
               target={"_blank"}
             >
               <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <FaLinkedinIn />
+                <BsFillPersonLinesFill />
               </div>
             </a>
             <a href="https://github.com/kewell0" target={"_blank"}>
@@ -41,12 +41,13 @@ const Hero = () => {
             <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <AiOutlineMail />
             </div>
+
             <a
-              href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
+              href="https://www.linkedin.com/in/caleb-owatah/"
               target={"_blank"}
             >
               <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <BsFillPersonLinesFill />
+                <FaLinkedinIn />
               </div>
             </a>
           </div>

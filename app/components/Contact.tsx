@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState } from "react";
+import { Link as LinkScroll } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
@@ -27,7 +30,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Caleb Owatah</h2>
+                <h2 className="py-2 ">Caleb Owatah</h2>
                 <p>Front-End Developer</p>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
@@ -36,35 +39,32 @@ const Contact = () => {
               </div>
               <div>
                 <p className="uppercase pt-8">Connect With Me</p>
-                <div className="flex items-center justify-between py-4">
-                  <Link
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <FaLinkedinIn />
-                    </div>
+                <div className="flex items-center gap-6 py-4">
+                  <Link href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing">
+                    <>
+                      <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                        <BsFillPersonLinesFill />
+                      </div>
+                    </>
                   </Link>
                   <Link
-                    href="https://github.com/fireclint"
+                    href="https://github.com/kewell0"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub />
                     </div>
                   </Link>
 
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                     <AiOutlineMail />
                   </div>
-                  <Link href="/resume">
-                    <>
-                      <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                        <BsFillPersonLinesFill />
-                      </div>
-                    </>
+
+                  <Link href="/" target="_blank" rel="noreferrer">
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaLinkedinIn />
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -130,7 +130,14 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex justify-center py-12">
-          <Link href="/">
+          <LinkScroll
+            to={"home"}
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <>
               <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                 <HiOutlineChevronDoubleUp
@@ -139,7 +146,7 @@ const Contact = () => {
                 />
               </div>
             </>
-          </Link>
+          </LinkScroll>
         </div>
       </div>
     </div>
