@@ -40,18 +40,17 @@ const Contact = () => {
               <div>
                 <p className="uppercase pt-8">Connect With Me</p>
                 <div className="flex items-center gap-6 py-4">
-                  <Link href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing">
+                  <Link
+                    href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
+                    target={"_blank"}
+                  >
                     <>
                       <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                         <BsFillPersonLinesFill />
                       </div>
                     </>
                   </Link>
-                  <Link
-                    href="https://github.com/kewell0"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <Link href="https://github.com/kewell0" target="_blank">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub />
                     </div>
@@ -61,7 +60,7 @@ const Contact = () => {
                     <AiOutlineMail />
                   </div>
 
-                  <Link href="/" target="_blank" rel="noreferrer">
+                  <Link href="/" target="_blank">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
