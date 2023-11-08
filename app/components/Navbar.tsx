@@ -58,7 +58,7 @@ export default function Navbar() {
         </LinkScroll>
         <div>
           <ul className="hidden sm:flex mr-[70px]">
-            <LinkScroll
+            {/* <LinkScroll
               activeClass="active"
               to={"home"}
               spy={true}
@@ -67,7 +67,7 @@ export default function Navbar() {
               duration={500}
             >
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-            </LinkScroll>
+            </LinkScroll> */}
             <LinkScroll
               activeClass="active"
               to={"about"}
@@ -172,7 +172,7 @@ export default function Navbar() {
           {/* Mobile Menu items */}
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <LinkScroll
+              {/* <LinkScroll
                 activeClass="active"
                 to={"home"}
                 spy={true}
@@ -183,7 +183,7 @@ export default function Navbar() {
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
                 </li>
-              </LinkScroll>
+              </LinkScroll> */}
               <LinkScroll
                 activeClass="active"
                 to={"about"}
