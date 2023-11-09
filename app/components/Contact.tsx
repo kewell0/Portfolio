@@ -10,28 +10,47 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import ContactImg from "../../public/assets/contact.jpg";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const form = useRef("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  // const form = useRef<any>("");
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_0552xld",
-        "template_ciobmdd",
-        form.current,
-        "PD92TtfFHhRLAIyZl"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    const formParams = {
+      form_name: name,
+      form_phone: phone,
+      form_email: email,
+      form_subject: subject,
+      form_message: message,
+    };
+
+    if (!formParams) {
+      toast.error("All input must be field..!! ");
+    } else {
+      emailjs
+        .sendForm(
+          "service_0552xld",
+          "template_ciobmdd",
+          formParams,
+          "PD92TtfFHhRLAIyZl"
+        )
+        .then(
+          () => {
+            toast.success("message sent");
+          },
+          () => {
+            toast.error("something went wrong.!!");
+          }
+        );
+    }
   };
 
   return (
@@ -96,7 +115,10 @@ const Contact = () => {
           {/* right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form ref={form} onSubmit={sendEmail}>
+              <form
+                // ref={form}
+                onSubmit={sendEmail}
+              >
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
@@ -104,6 +126,9 @@ const Contact = () => {
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       name="name"
+                      value={name}
+                      onChange={(e) => e.target.value}
+                      // required
                     />
                   </div>
                   <div className="flex flex-col">
@@ -114,6 +139,9 @@ const Contact = () => {
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       name="phone"
+                      value={phone}
+                      onChange={(e) => e.target.value}
+                      // required
                     />
                   </div>
                 </div>
@@ -123,6 +151,9 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
                     name="email"
+                    value={email}
+                    onChange={(e) => e.target.value}
+                    // required
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -131,6 +162,9 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
                     name="subject"
+                    value={subject}
+                    onChange={(e) => e.target.value}
+                    // required
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -138,6 +172,9 @@ const Contact = () => {
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
                     name="message"
+                    value={message}
+                    onChange={(e) => e.target.value}
+                    // required
                   ></textarea>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
@@ -167,6 +204,7 @@ const Contact = () => {
           </LinkScroll>
         </div>
       </div>
+      <ToastContainer position="top-center" autoClose={2000} />
     </div>
   );
 };
