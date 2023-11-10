@@ -46,7 +46,10 @@ const Contact = () => {
       toast.error("All input must be field..!! ");
       return false;
     } else {
-      emailjs.sendForm(service_ID, template_ID, e.target, public_key).then(
+      // casting e.target
+      const target = e.target as HTMLButtonElement;
+
+      emailjs.sendForm(service_ID, template_ID, target.value, public_key).then(
         () => {
           setName("");
           setPhone("");
