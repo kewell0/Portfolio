@@ -24,6 +24,10 @@ const Contact = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const service_ID = "service_0552xld";
+    const template_ID = "template_ciobmdd";
+    const public_key = "PD92TtfFHhRLAIyZl";
+
     const formParams = {
       form_name: name,
       form_phone: phone,
@@ -32,24 +36,29 @@ const Contact = () => {
       form_message: message,
     };
 
-    if (!formParams) {
+    if (
+      formParams.form_name === "" ||
+      formParams.form_phone === "" ||
+      formParams.form_email === "" ||
+      formParams.form_subject === "" ||
+      formParams.form_message === ""
+    ) {
       toast.error("All input must be field..!! ");
+      return false;
     } else {
-      emailjs
-        .sendForm(
-          "service_0552xld",
-          "template_ciobmdd",
-          formParams,
-          "PD92TtfFHhRLAIyZl"
-        )
-        .then(
-          () => {
-            toast.success("message sent");
-          },
-          () => {
-            toast.error("something went wrong.!!");
-          }
-        );
+      emailjs.sendForm(service_ID, template_ID, e.target, public_key).then(
+        () => {
+          setName("");
+          setPhone("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+          toast.success("message sent");
+        },
+        () => {
+          toast.error("something went wrong.!!");
+        }
+      );
     }
   };
 
@@ -127,7 +136,7 @@ const Contact = () => {
                       type="text"
                       name="name"
                       value={name}
-                      onChange={(e) => e.target.value}
+                      onChange={(e) => setName(e.target.value)}
                       // required
                     />
                   </div>
@@ -140,7 +149,7 @@ const Contact = () => {
                       type="text"
                       name="phone"
                       value={phone}
-                      onChange={(e) => e.target.value}
+                      onChange={(e) => setPhone(e.target.value)}
                       // required
                     />
                   </div>
@@ -152,7 +161,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     value={email}
-                    onChange={(e) => e.target.value}
+                    onChange={(e) => setEmail(e.target.value)}
                     // required
                   />
                 </div>
@@ -163,7 +172,7 @@ const Contact = () => {
                     type="text"
                     name="subject"
                     value={subject}
-                    onChange={(e) => e.target.value}
+                    onChange={(e) => setSubject(e.target.value)}
                     // required
                   />
                 </div>
@@ -173,7 +182,7 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 border-gray-300"
                     name="message"
                     value={message}
-                    onChange={(e) => e.target.value}
+                    onChange={(e) => setMessage(e.target.value)}
                     // required
                   ></textarea>
                 </div>
