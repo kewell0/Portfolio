@@ -28,7 +28,6 @@ export default function Navbar() {
 
   const handleNav = () => {
     setNav(!nav);
-    console.log("clicked");
   };
 
   return (
