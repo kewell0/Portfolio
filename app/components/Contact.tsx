@@ -110,11 +110,15 @@ const Contact = () => {
                     </div>
                   </Link>
 
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <AiOutlineMail />
-                  </div>
-
-                  <Link href="/" target="_blank">
+                  <a href="https://github.com/kewell0" target={"_blank"}>
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <AiOutlineMail />
+                    </div>
+                  </a>
+                  <Link
+                    href="https://www.linkedin.com/in/caleb-owatah/"
+                    target={"_blank"}
+                  >
                     <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
