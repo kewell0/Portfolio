@@ -253,11 +253,15 @@ export default function Navbar() {
                   </div>
                 </Link>
 
-                <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail />
-                </div>
-
-                <Link href="/" target="_blank">
+                <Link href="mailto:Owatahcaleb@gmail.com" target="_blank">
+                  <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <AiOutlineMail />
+                  </div>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/caleb-owatah/"
+                  target={"_blank"}
+                >
                   <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaLinkedinIn />
                   </div>

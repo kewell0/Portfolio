@@ -38,9 +38,11 @@ const Hero = () => {
                 <FaGithub />
               </div>
             </a>
-            <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail />
-            </div>
+            <a href="mailto:Owatahcaleb@gmail.com" target="_blank">
+              <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <AiOutlineMail />
+              </div>
+            </a>
 
             <a
               href="https://www.linkedin.com/in/caleb-owatah/"

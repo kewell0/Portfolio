@@ -110,7 +110,7 @@ const Contact = () => {
                     </div>
                   </Link>
 
-                  <a href="https://github.com/kewell0" target={"_blank"}>
+                  <a href="mailto:Owatahcaleb@gmail.com" target="_blank">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                       <AiOutlineMail />
                     </div>
