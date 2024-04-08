@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
-import AboutImg from "public/assets/caleb.jpg";
+import CalebImg from "public/assets/caleb.jpg";
 
 const About = () => {
   return (
@@ -47,7 +47,7 @@ const About = () => {
           </LinkScroll>
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image src={AboutImg} className="rounded-xl" alt="image" />
+          <Image src={CalebImg} className="rounded-xl" alt="image" />
         </div>
       </div>
     </div>
