@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
-import CalebImg from "/public/assets/caleb.jpg";
+import CalebImg from "public/assets/calebO.png";
 
 const About = () => {
   return (
