@@ -18,12 +18,13 @@ const About = () => {
           </p>
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">
-            I specialize in building mobile responsive front-end UI applications
-            that connect with API’s and other backend technologies. I’m
-            passionate about learning new technologies. I am most proficient in
-            building front-end applications using HTML, CSS, Javascript, React
-            and NextJs I am a quick learner and can pick up new tech stacks as
-            needed.
+            I specialize in building mobile-responsive applications that
+            seamlessly connect with backend technologies via APIs. Proficient in
+            HTML, CSS, JavaScript, React,Next.js and ReactNative, I adapt
+            quickly to new tech stacks to deliver efficient solutions tailored
+            to project requirements. With a keen eye for design and a commitment
+            to staying updated, I strive to exceed user expectations and drive
+            business success.
           </p>
           {/* <p className="py-2 text-gray-600">
             I started web developement in 2013 managing multiple e-commerce

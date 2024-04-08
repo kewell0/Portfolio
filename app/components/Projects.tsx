@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import propertyImg from "../../public/assets/projects/property.jpg";
-import cryptoImg from "../../public/assets/projects/crypto.jpg";
-import netflixImg from "../../public/assets/projects/netflix.jpg";
-import twitchImg from "../../public/assets/projects/twitch.jpg";
+// import netflixImg from "../../public/assets/projects/netflix.jpg";
 
 import movieLand from "../../public/assets/projects/movie-land.png";
 import barter from "../../public/assets/projects/Barter-app.png";
+import imacare from "../../public/assets/projects/imacare.png";
 import Project from "./Project";
 
 const Projects = () => {
@@ -20,6 +18,12 @@ const Projects = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <Project
+            title="Hospital Management System"
+            backgroundImg={imacare}
+            projectUrl="https://imacare.vercel.app"
+            tech="React JS, Material UI, Redux-Toolkit"
+          />
+          <Project
             title="Movie-land"
             backgroundImg={movieLand}
             projectUrl="https://movie-land11.netlify.app"
@@ -31,12 +35,7 @@ const Projects = () => {
             projectUrl="https://barter-right.vercel.app/"
             tech="HTML, CSS, JavaScript"
           />
-          {/* <Project
-            title="Netflix App"
-            backgroundImg={netflixImg}
-            projectUrl="/netflix"
-            tech="React JS"
-          /> */}
+
           {/* <Project
             title="Twitch UI"
             backgroundImg={twitchImg}
