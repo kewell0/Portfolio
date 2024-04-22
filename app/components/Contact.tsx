@@ -47,21 +47,23 @@ const Contact = () => {
       return false;
     } else {
       // casting e.target
-      const target = e.target as HTMLButtonElement;
+      // const target = e.target as HTMLButtonElement;
 
-      emailjs.sendForm(service_ID, template_ID, target.value, public_key).then(
-        () => {
-          setName("");
-          setPhone("");
-          setEmail("");
-          setSubject("");
-          setMessage("");
-          toast.success("message sent");
-        },
-        () => {
-          toast.error("something went wrong.!!");
-        }
-      );
+      emailjs
+        .sendForm(service_ID, template_ID, e.currentTarget, public_key)
+        .then(
+          () => {
+            setName("");
+            setPhone("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+            toast.success("message sent");
+          },
+          () => {
+            toast.error("something went wrong.!!");
+          }
+        );
     }
   };
 
