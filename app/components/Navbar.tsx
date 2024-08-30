@@ -30,15 +30,15 @@ export default function Navbar() {
     setNav(!nav);
   };
 
-  return (
-    <nav
-      className={
+return (
+<nav
+    className={
         boxShadow
           ? "fixed w-full h-20 shadow-xl z-[900] bg-[#ecf0f3]"
           : "fixed w-full h-20  z-[900] bg-[#ecf0f3]"
       }
     >
-      <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
+    <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
         <LinkScroll
           activeClass="active"
           to={"home"}
@@ -57,16 +57,7 @@ export default function Navbar() {
         </LinkScroll>
         <div>
           <ul className="hidden sm:flex mr-[70px]">
-            {/* <LinkScroll
-              activeClass="active"
-              to={"home"}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-            </LinkScroll> */}
+            
             <LinkScroll
               activeClass="active"
               to={"about"}
@@ -75,7 +66,7 @@ export default function Navbar() {
               offset={-20}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+              <li className="ml-10 text-sm uppercase  hover:border-b-2  hover:border-gray-300 ">About</li>
             </LinkScroll>
             <LinkScroll
               activeClass="active"
@@ -85,7 +76,7 @@ export default function Navbar() {
               offset={-20}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+              <li className="ml-10 text-sm uppercase hover:border-b-2  hover:border-gray-300 ">Skills</li>
             </LinkScroll>
             <LinkScroll
               activeClass="active"
@@ -95,7 +86,7 @@ export default function Navbar() {
               offset={-50}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-10 text-sm uppercase hover:border-b-2  hover:border-gray-300 ">
                 Projects
               </li>
             </LinkScroll>
@@ -110,7 +101,7 @@ export default function Navbar() {
               offset={-50}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-10 text-sm uppercase border-b-2 border-[#ecf0f3]  hover:border-b-2 hover:border-gray-300 ">
                 Contact
               </li>
             </LinkScroll>
@@ -126,14 +117,14 @@ export default function Navbar() {
       <div
         onClick={() => setNav(false)}
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav ? "md:hidden fixed left-0 top-0 w-full min-h-full bg-black/70" : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-full bg-[#ecf0f3] p-5 sm:p-10 ease-in duration-500"
+              : "fixed left-[-100%] top-0 p-5 sm:p-10  ease-in duration-500"
           }
         >
           <div>
@@ -237,7 +228,7 @@ export default function Navbar() {
             </ul>
             <div className="mt-16">
               <p className="tracking-widest text-[#5651e5]">LET'S CONNECT</p>
-              <div className="flex gap-8 items-center my-4 w-full sm:w-[75%]">
+              <div className="flex gap-5  sm:gap-10 items-center my-4 w-full sm:w-[75%]">
                 <Link
                   href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
                   target="_blank"
