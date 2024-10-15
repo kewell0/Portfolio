@@ -5,7 +5,7 @@ import React from "react";
 import movieLand from "../../public/assets/projects/movie-land.png";
 import barter from "../../public/assets/projects/Barter-app.png";
 import imacare from "../../public/assets/projects/imacare.png";
-import fehcs from "../../public/assets/projects/fehcs.jpg";
+import fehcs from "../../public/assets/projects/fehcs.png";
 import Project from "./Project";
 
 const Projects = () => {
