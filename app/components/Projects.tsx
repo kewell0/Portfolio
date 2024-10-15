@@ -5,6 +5,7 @@ import React from "react";
 import movieLand from "../../public/assets/projects/movie-land.png";
 import barter from "../../public/assets/projects/Barter-app.png";
 import imacare from "../../public/assets/projects/imacare.png";
+import fehcs from "../../public/assets/projects/fehcs.jpg";
 import Project from "./Project";
 
 const Projects = () => {
@@ -16,6 +17,12 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
+          <Project
+            title="Health Care Service"
+            backgroundImg={fehcs}
+            projectUrl="https://fehcs.vercel.app/"
+            tech="NextJS, TailwindCss, Framer Motion"
+          />
           <Project
             title="Hospital Management System"
             backgroundImg={imacare}
