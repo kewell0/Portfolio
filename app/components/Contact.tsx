@@ -97,7 +97,7 @@ const Contact = () => {
                 <p className="uppercase pt-8">Connect With Me</p>
                 <div className="flex items-center gap-6 py-4">
                   <Link
-                    href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1gLY6INPnwlKVlfqyq1ITHNu8PeNh2hyF/view?usp=sharing"
                     target={"_blank"}
                   >
                     <>
