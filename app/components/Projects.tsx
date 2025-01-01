@@ -5,16 +5,14 @@ import React from "react";
 import movieLand from "../../public/assets/projects/movie-land.png";
 import barter from "../../public/assets/projects/Barter-app.png";
 import imacare from "../../public/assets/projects/imacare.png";
-import fehcs from "../../public/assets/projects/fehcs.png";
+import fehcs from "../../public/assets/projects/FEHCS.png";
 import Project from "./Project";
 
 const Projects = () => {
   return (
     <div id="projects" className="w-full lg:px-16">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
-          Projects
-        </p>
+        <p className="text-xl tracking-widest uppercase text-[#5651e5]">Projects</p>
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <Project

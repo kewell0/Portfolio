@@ -10,18 +10,19 @@ const Hero = () => {
     <div id="home" className="w-full h-[620px] text-center pt-20">
       <div className="max-w-[1240px] w-full h-full  mx-auto p-2 flex justify-center items-center ">
         <div>
-          <p className="text-sm tracking-widest text-gray-600">
-            LET'S BUILD SOMETHING TOGETHER
-          </p>
+          <p className="text-sm tracking-widest text-gray-600">LET'S BUILD SOMETHING TOGETHER</p>
           <h1 className="py-4 text-gray-700">
             Hi, I'm <span className="text-[#5651e5]">Caleb</span>
           </h1>
           <h1 className="py-2 text-gray-700">A Front-End Developer</h1>
 
+          {/* <p className="text-md tracking-widest text-gray-600 max-w-[75%] m-auto">
+            I specialize in building exceptional digital user experiences. Currently focused on building responsive
+            front-end applications while learning back-end technologies.
+          </p> */}
           <p className="text-md tracking-widest text-gray-600 max-w-[75%] m-auto">
-            I specialize in building exceptional digital user experiences.
-            Currently focused on building responsive front-end applications
-            while learning back-end technologies.
+            I specialize in creating seamless digital experiences with a focus on responsive front-end development,
+            while expanding my skills in back-end technologies.
           </p>
 
           <div className="flex items-center justify-between max-w-[330px] m-auto py-6">
@@ -44,10 +45,7 @@ const Hero = () => {
               </div>
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/caleb-owatah/"
-              target={"_blank"}
-            >
+            <a href="https://www.linkedin.com/in/caleb-owatah/" target={"_blank"}>
               <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn />
               </div>
