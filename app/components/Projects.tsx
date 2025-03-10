@@ -18,7 +18,7 @@ const Projects = () => {
           <Project
             title="Health Care Service"
             backgroundImg={fehcs}
-            projectUrl="https://fehcs.vercel.app/"
+            projectUrl="https://www.fehomecareservices.com/"
             tech="NextJS, TailwindCss, Framer Motion"
           />
           <Project
