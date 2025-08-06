@@ -4,6 +4,7 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { CV } from "../utils/links";
 
 const Hero = () => {
   return (
@@ -26,10 +27,7 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center justify-between max-w-[330px] m-auto py-6">
-            <a
-              href="https://drive.google.com/file/d/1gLY6INPnwlKVlfqyq1ITHNu8PeNh2hyF/view?usp=sharing"
-              target={"_blank"}
-            >
+            <a href={CV} target={"_blank"}>
               <div className="rounded-full shadow-gray-400 shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <BsFillPersonLinesFill />
               </div>
