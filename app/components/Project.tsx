@@ -8,42 +8,71 @@ type Props = {
   tech: string;
   image: StaticImageData;
   link: string;
+  description: string;
 };
 
-export default function Project({ title, tech, image, link }: Props) {
+export default function Project({
+  title,
+  tech,
+  image,
+  link,
+  description,
+}: Props) {
   return (
-    <motion.a
-      href={link}
-      target="_blank"
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 240, damping: 20 }}
-      className="group block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:shadow-lg"
+    <motion.div
+      // href={link}
+      // target="_blank"
+      // rel="noopener noreferrer"
+      whileHover={{ y: -6 }}
+      transition={{ type: "spring", stiffness: 260, damping: 22 }}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl"
     >
       {/* Image */}
-      <div className="relative h-[260px] w-full overflow-hidden bg-gray-100">
-        <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.5 }}>
+      <div className="relative h-[180px] sm:h-[260px] w-full overflow-hidden bg-gray-100">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="h-full w-full"
+        >
           <Image
             src={image}
             alt={title}
             className="h-full w-full object-cover"
+            priority
           />
         </motion.div>
 
-        {/* soft overlay */}
-        <div className="absolute inset-0 bg-black/0 transition group-hover:bg-black/[0.03]" />
+        {/* subtle overlay */}
+        <div className="absolute inset-0 bg-black/0 transition group-hover:bg-black/5" />
       </div>
 
       {/* Content */}
-      <div className="p-5">
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+      <div className="flex flex-1 flex-col p-5">
+        {/* Title */}
+        <h3 className="text-lg font-semibold text-gray-900 tracking-tight">
+          {title}
+        </h3>
 
-        <p className="mt-1 text-sm text-gray-500">{tech}</p>
+        {/* Description */}
+        <p className="mt-2 text-sm leading-relaxed text-gray-600">
+          {description}
+        </p>
 
-        <div className="mt-4 flex items-center gap-1 text-sm text-gray-600">
+        {/* Tech stack */}
+        <p className="mt-3 text-xs font-medium tracking-wide text-[#5651e5]">
+          {tech}
+        </p>
+
+        {/* CTA */}
+        <a  href={link}
+      target="_blank"
+      rel="noopener noreferrer" className="mt-auto w-fit pt-4 flex items-center gap-1 text-sm font-medium text-gray-700 transition group-hover:text-gray-900 animate-pulse">
           View project
-          <span className="transition group-hover:translate-x-1">→</span>
-        </div>
+          <span className="transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </a>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }
