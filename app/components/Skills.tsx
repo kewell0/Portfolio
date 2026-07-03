@@ -11,7 +11,7 @@ import Firebase from "../../public/assets/skills/firebase.png";
 import NextJS from "../../public/assets/skills/nextjs.png";
 import Typescript from "../../public/assets/skills/typescript.svg";
 // import ReactNative from "../../public/assets/skills/react-native.png";
-import NodeJS from "../../public/assets/skills/nodejs.png";
+import NodeJS from "../../public/assets/skills/NodeJs.png";
 import AWS from "../../public/assets/skills/aws.png";
 import { motion } from "framer-motion";
 
@@ -82,7 +82,7 @@ const Skills = () => {
     };
   }, []);
   return (
-    <div id="skills" className="w-full p-2 lg:h-screen">
+    <div id="skills" className="w-full p-4 lg:h-screen">
       <div className="mx-auto flex h-full max-w-[1240px] flex-col justify-center lg:px-16">
         <p className="text-xl uppercase tracking-widest text-[#5651e5]">
           Skills
