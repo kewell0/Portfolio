@@ -67,7 +67,6 @@ const Skills = () => {
       height: 84,
     },
     { name: "AWS", image: AWS },
-    // { name: "React Native", image: ReactNative },
   ];
 
   React.useEffect(() => {
@@ -89,6 +88,7 @@ const Skills = () => {
           Skills
         </p>
         <h2 className="py-4">What I Can Do</h2>
+
         {/* Cards container */}
 
         <motion.div
