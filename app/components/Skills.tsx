@@ -11,7 +11,7 @@ import Firebase from "../../public/assets/skills/firebase.png";
 import NextJS from "../../public/assets/skills/nextjs.png";
 import Typescript from "../../public/assets/skills/typescript.svg";
 // import ReactNative from "../../public/assets/skills/react-native.png";
-import NodeJS from "../../public/assets/skills/NodeJs.png";
+import NodeJS from "../../public/assets/skills/nodejs.png";
 import AWS from "../../public/assets/skills/aws.png";
 import { motion } from "framer-motion";
 
