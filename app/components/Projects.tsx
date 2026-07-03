@@ -1,62 +1,84 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 import movieLand from "../../public/assets/projects/movie-land.png";
 import barter from "../../public/assets/projects/Barter-app.png";
 import imacare from "../../public/assets/projects/imacare.png";
 import fehcs from "../../public/assets/projects/fehcs.png";
 import teeketing from "../../public/assets/projects/teeketing.png";
+
 import Project from "./Project";
 
-const Projects = () => {
-  return (
-    <div id="projects" className="w-full lg:px-16">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]"> Some Projects</p>
-        <h2 className="py-4">What I&apos;ve Built</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <Project
-            title="Event Management/Ticketing System"
-            backgroundImg={teeketing}
-            projectUrl="https://www.teeketing.com/"
-            tech="NextJS, TailwindCss, Framer Motion, MongoDB"
-          />
-          <Project
-            title="Health Care Service"
-            backgroundImg={fehcs}
-            projectUrl="https://www.fehomecareservices.com/"
-            tech="NextJS, TailwindCss, Framer Motion"
-          />
-          <Project
-            title="Hospital Management System"
-            backgroundImg={imacare}
-            projectUrl="https://imacare.vercel.app"
-            tech="React JS, Material UI, Redux-Toolkit"
-          />
-          <Project
-            title="Movie-land"
-            backgroundImg={movieLand}
-            projectUrl="https://movie-land11.netlify.app"
-            tech="React JS"
-          />
-          <Project
-            title="Barter-right"
-            backgroundImg={barter}
-            projectUrl="https://barter-right.vercel.app/"
-            tech="HTML, CSS, JavaScript"
-          />
-
-          {/* <Project
-            title="Twitch UI"
-            backgroundImg={twitchImg}
-            projectUrl="/twitch"
-            tech="Next JS"
-          /> */}
-        </div>
-      </div>
-    </div>
-  );
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
 };
 
-export default Projects;
+export default function Projects() {
+  return (
+    <section id="projects" className="w-full bg-white py-28 px-6">
+      <div className="mx-auto max-w-[1240px]">
+        {/* Header */}
+        <div className="mb-14">
+          <p className="text-xl uppercase tracking-widest text-[#5651e5]">
+            Selected Work
+          </p>
+
+          <h2 className="mt-3 text-4xl font-semibold text-gray-900">
+            Projects
+          </h2>
+        </div>
+
+        {/* Grid */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 gap-6 md:grid-cols-2"
+        >
+          <Project
+            title="Event Management System"
+            tech="Next.js · MongoDB · AWS"
+            image={teeketing}
+            link="https://www.teeketing.com/"
+          />
+
+          <Project
+            title="Healthcare Platform"
+            tech="Next.js · Tailwind · Framer-motion"
+            image={fehcs}
+            link="https://www.fehomecareservices.com/"
+          />
+
+          <Project
+            title="Hospital System"
+            tech="React · Redux"
+            image={imacare}
+            link="https://imacare.vercel.app"
+          />
+
+          <Project
+            title="Movie App"
+            tech="React · imdb-API"
+            image={movieLand}
+            link="https://movie-land11.netlify.app"
+          />
+
+          <Project
+            title="Barter Platform"
+            tech="HTML · CSS · JS"
+            image={barter}
+            link="https://barter-right.vercel.app/"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+}

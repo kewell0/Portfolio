@@ -9,6 +9,7 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../../public/assets/logo1.png";
+import logo1 from "../../public/assets/MyLogo.png";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -30,34 +31,26 @@ export default function Navbar() {
     setNav(!nav);
   };
 
-return (
-<nav
-    className={
+  return (
+    <nav
+      className={
         boxShadow
-          ? "fixed w-full h-20 shadow-xl z-[900] bg-[#ecf0f3]"
-          : "fixed w-full h-20  z-[900] bg-[#ecf0f3]"
+          ? "fixed z-[900] h-20 w-full bg-[#ecf0f3] shadow-xl"
+          : "fixed z-[900] h-20 w-full bg-[#ecf0f3]"
       }
     >
-    <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
-        <LinkScroll
-          activeClass="active"
-          to={"home"}
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
+      <div className="flex h-full w-full items-center justify-between px-4 xl:px-16">
+        <div className="relative -left-8 flex h-[80px] items-center sm:-left-0 sm:h-[90px]">
           <Image
-            src={logo}
-            className="cursor-pointer"
+            src={logo1}
             alt="logo"
-            width="80"
-            height="50"
+            width={148}
+            height={90}
+            className="h-full w-auto cursor-pointer"
           />
-        </LinkScroll>
+        </div>
         <div>
-          <ul className="hidden sm:flex mr-[70px]">
-            
+          <ul className="mr-[70px] hidden sm:flex">
             <LinkScroll
               activeClass="active"
               to={"about"}
@@ -66,7 +59,9 @@ return (
               offset={-20}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase  hover:border-b-2  hover:border-gray-300 ">About</li>
+              <li className="ml-10 text-sm uppercase hover:border-b-2 hover:border-gray-300">
+                About
+              </li>
             </LinkScroll>
             <LinkScroll
               activeClass="active"
@@ -76,7 +71,9 @@ return (
               offset={-20}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase hover:border-b-2  hover:border-gray-300 ">Skills</li>
+              <li className="ml-10 text-sm uppercase hover:border-b-2 hover:border-gray-300">
+                Skills
+              </li>
             </LinkScroll>
             <LinkScroll
               activeClass="active"
@@ -86,7 +83,7 @@ return (
               offset={-50}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase hover:border-b-2  hover:border-gray-300 ">
+              <li className="ml-10 text-sm uppercase hover:border-b-2 hover:border-gray-300">
                 Projects
               </li>
             </LinkScroll>
@@ -101,15 +98,15 @@ return (
               offset={-50}
               duration={500}
             >
-              <li className="ml-10 text-sm uppercase border-b-2 border-[#ecf0f3]  hover:border-b-2 hover:border-gray-300 ">
+              <li className="ml-10 border-b-2 border-[#ecf0f3] text-sm uppercase hover:border-b-2 hover:border-gray-300">
                 Contact
               </li>
             </LinkScroll>
           </ul>
-          {/* Hamburger */}
-          <div onClick={handleNav} className="sm:hidden cursor-pointer">
-            <AiOutlineMenu size={25} />
-          </div>
+        </div>
+        {/* Hamburger */}
+        <div onClick={handleNav} className="cursor-pointer sm:hidden">
+          <AiOutlineMenu size={25} />
         </div>
       </div>
 
@@ -117,18 +114,20 @@ return (
       <div
         onClick={() => setNav(false)}
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full min-h-full bg-black/70" : ""
+          nav
+            ? "fixed left-0 top-0 min-h-full w-full bg-black/70 md:hidden"
+            : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-full bg-[#ecf0f3] p-5 sm:p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-5 sm:p-10  ease-in duration-500"
+              ? "md:[45%] fixed left-0 top-0 h-full w-[75%] bg-[#ecf0f3] p-5 duration-500 ease-in sm:w-[60%] sm:p-10"
+              : "fixed left-[-100%] top-0 p-5 duration-500 ease-in sm:p-10"
           }
         >
           <div>
-            <div className="flex items-center justify-between w-full">
+            <div className="flex w-full items-center justify-between">
               <LinkScroll
                 activeClass="active"
                 to={"home"}
@@ -138,29 +137,29 @@ return (
                 duration={500}
               >
                 <Image
-                  src={logo}
-                  className="cursor-pointer"
+                  src={logo1}
+                  className="relative -left-6 cursor-pointer"
                   alt="logo"
-                  width="70"
-                  height="35"
+                  width="90"
+                  height="60"
                   onClick={() => setNav(false)}
                 />
               </LinkScroll>
               <div
                 onClick={handleNav}
-                className="rounded-full shadow-gray-300 shadow-lg p-3 cursor-pointer"
+                className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-300"
               >
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
-              <p className="w-[80%] md:w-[90%] py-4">
+            <div className="my-4 border-b border-gray-300">
+              <p className="w-[80%] py-4 md:w-[90%]">
                 Let's build something together
               </p>
             </div>
           </div>
           {/* Mobile Menu items */}
-          <div className="py-4 flex flex-col">
+          <div className="flex flex-col py-4">
             <ul className="uppercase">
               {/* <LinkScroll
                 activeClass="active"
@@ -228,24 +227,24 @@ return (
             </ul>
             <div className="mt-16">
               <p className="tracking-widest text-[#5651e5]">LET'S CONNECT</p>
-              <div className="flex gap-5  sm:gap-10 items-center my-4 w-full sm:w-[75%]">
+              <div className="my-4 flex w-full items-center gap-5 sm:w-[75%] sm:gap-10">
                 <Link
                   href="https://drive.google.com/file/d/1_dwSXivTj0S7EzVVEI_l9EWGWcQSnB6A/view?usp=sharing"
                   target="_blank"
                 >
-                  <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <BsFillPersonLinesFill />
                   </div>
                 </Link>
 
                 <Link href="https://github.com/kewell0" target="_blank">
-                  <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <FaGithub />
                   </div>
                 </Link>
 
                 <Link href="mailto:Owatahcaleb@gmail.com" target="_blank">
-                  <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <AiOutlineMail />
                   </div>
                 </Link>
@@ -253,7 +252,7 @@ return (
                   href="https://www.linkedin.com/in/caleb-owatah/"
                   target={"_blank"}
                 >
-                  <div className="rounded-full shadow-gray-400 shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <FaLinkedinIn />
                   </div>
                 </Link>

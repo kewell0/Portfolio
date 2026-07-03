@@ -7,30 +7,43 @@ import CalebImg from "../../public/assets/calebO.png";
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-12 lg:px-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+    <div id="about" className="flex w-full items-center p-2 py-12 lg:px-16">
+      <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
         <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#5651e5]">About</p>
+          <p className="text-xl uppercase tracking-widest text-[#5651e5]">
+            About
+          </p>
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">
-            I specialize in building mobile-responsive applications that seamlessly connect with backend technologies
-            via APIs. Proficient in HTML, CSS, JavaScript, React, Next.js and ReactNative, I adapt quickly to new tech
-            stacks to deliver efficient solutions tailored to project requirements. With a keen eye for design and a
-            commitment to staying updated, I strive to exceed user expectations and drive business success.
+            Software Developer with hands-on experience building scalable web
+            applications and interactive user interfaces across multiple
+            industries, including EventTech, AgriTech, EdTech, and HealthTech.
+            Proficient in JavaScript, React, Next.js, React Native, HTML5, CSS,
+            and Node.js, with experience delivering responsive, accessible, and
+            maintainable applications. Skilled at collaborating with
+            cross-functional teams to translate design concepts into functional,
+            high-quality products while continuously improving application
+            performance and user experience. Passionate about building
+            intuitive, user-centric solutions using modern web technologies and
+            writing clean, maintainable code.
           </p>
-          {/* <p className="py-2 text-gray-600">
-            I started web developement in 2013 managing multiple e-commerce
-            websites on CMS platforms such as WordPress, BigCommerce, and
-            Shopify. I have experience working directly with clients and taking
-            mock wireframes all the way to deployed applications. In my spare
-            time I run Code Commerce, a Youtube channel where I teach web
-            developement and various front-end technologies.
-          </p> */}
-          <LinkScroll activeClass="active" to={"projects"} spy={true} smooth={true} offset={-50} duration={500}>
-            <p className="py-2 text-gray-600 underline cursor-pointer">Check out some of my latest projects.</p>
+
+          <LinkScroll
+            activeClass="active"
+            to="projects"
+            spy
+            smooth
+            offset={-50}
+            duration={500}
+            className="group inline-block cursor-pointer"
+          >
+            <p className="relative inline-block py-2 font-semibold text-gray-600 transition-colors duration-300 group-hover:text-[#5651e5]">
+              Check out some of my latest projects.
+              <span className="absolute left-0 -bottom-[2px] h-[1.5px] w-full origin-left scale-x-0 bg-[#5651e5] transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+            </p>
           </LinkScroll>
         </div>
-        <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+        <div className="m-auto flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105">
           <Image src={CalebImg} className="rounded-xl" alt="image" />
         </div>
       </div>
