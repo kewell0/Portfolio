@@ -87,7 +87,7 @@ const Skills = () => {
         <p className="text-xl uppercase tracking-widest text-[#5651e5]">
           Skills
         </p>
-        <h2 className="py-4">What I Can Do</h2>
+        <h2 className="py-4">Technologies I Work With</h2>
 
         {/* Cards container */}
 
@@ -146,5 +146,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-// text-[#5651e5]
