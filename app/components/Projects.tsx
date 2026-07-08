@@ -24,16 +24,16 @@ const container = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full bg-white py-28 px-6">
+    <section id="projects" className="w-full bg-white px-6 py-28">
       <div className="mx-auto max-w-[1240px]">
         {/* Header */}
         <div className="mb-14">
           <p className="text-xl uppercase tracking-widest text-[#5651e5]">
-            Some projects
+            Portfolio
           </p>
 
           <h2 className="mt-3 text-4xl font-semibold text-gray-900">
-            Projects
+            Professional & Personal Projects
           </h2>
         </div>
 
@@ -47,7 +47,7 @@ export default function Projects() {
         >
           <Project
             title="Teeketing"
-             description="An event management platform that enables users to create, manage, and purchase tickets for events."
+            description="An event management platform that enables users to create, manage, and purchase tickets for events."
             tech="Next.js · MongoDB · AWS"
             image={teeketing}
             link="https://www.teeketing.com/"
@@ -55,23 +55,23 @@ export default function Projects() {
 
           <Project
             title="Velocity Africa"
-              description="A venture capital platform featuring a content-managed blog, portfolio showcase, and investment resources powered by Strapi CMS."
-              tech="Next.js · TypeScript · Tailwind CSS · Strapi "
+            description="A venture capital platform featuring a content-managed blog, portfolio showcase, and investment resources powered by Strapi CMS."
+            tech="Next.js · TypeScript · Tailwind CSS · Strapi "
             image={velocity}
             link="https://velocity.africa/"
           />
 
           <Project
             title="Certifytrusts"
-              description="A certificate issuance and verification platform that enables organizations to securely create, manage, and validate digital certificates."
-              tech="Next.js · TypeScript · Tailwind CSS · Express · MongoDB  "
+            description="A certificate issuance and verification platform that enables organizations to securely create, manage, and validate digital certificates."
+            tech="Next.js · TypeScript · Tailwind CSS · Express · MongoDB  "
             image={certify}
             link="https://www.certifytrusts.com/"
           />
 
           <Project
             title="FE Home Care Services"
-              description="A professional healthcare service website that showcases home care offerings, allowing clients to explore services, learn about caregivers, and request care support online."
+            description="A professional healthcare service website that showcases home care offerings, allowing clients to explore services, learn about caregivers, and request care support online."
             tech="Next.js · Tailwind · Framer-motion"
             image={fehcs}
             link="https://www.fehomecareservices.com/"
